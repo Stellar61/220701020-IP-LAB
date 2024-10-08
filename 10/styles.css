@@ -1,0 +1,45 @@
+body {
+    background-image: url("backgrnd.png");
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #121212; 
+    margin: 0;
+    padding: 20px;
+    color: #ffffff; 
+}
+
+.game-title {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: #c226c7;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.instructions {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #b12672; 
+}
+
+.bubble {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    color: #121212; 
+    text-align: center;
+    background-color: #bb86fc; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
