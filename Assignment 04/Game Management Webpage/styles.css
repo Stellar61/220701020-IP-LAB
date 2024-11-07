@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 20px auto;
+    padding: 20px;
+    width: 300px;
+}
+
+label, select, input, button {
+    margin: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#scoreboard {
+    list-style: none;
+    padding: 0;
+}
+
+#scoreboard li {
+    background-color: #ddd;
+    padding: 5px;
+    margin: 5px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Game Management Webpage</h1>
+
+    <!-- Game Settings Section -->
+    <section id="game-settings">
+        <h2>Game Settings</h2>
+        <label for="difficulty">Difficulty Level:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select><br>
+
+        <label for="speed">Game Speed:</label>
+        <input type="range" id="speed" min="1" max="10" value="5"><br>
+
+        <label for="theme">Game Theme:</label>
+        <select id="theme">
+            <option value="default">Default</option>
+            <option value="dark">Dark Mode</option>
+            <option value="light">Light Mode</option>
+        </select><br>
+
+        <button id="apply-settings">Apply Settings</button>
+    </section>
+
+    <!-- Player Management Section -->
+    <section id="player-management">
+        <h2>Player Management</h2>
+        <label for="player-name">Player Name:</label>
+        <input type="text" id="player-name">
+        <button id="add-player">Add Player</button><br>
+
+        <h3>Scoreboard</h3>
+        <ul id="scoreboard"></ul>
+
+        <button id="reset-scores">Reset Scores</button>
+    </section>
+
+    <!-- Game State Section -->
+    <section id="game-state">
+        <h2>Game State & Statistics</h2>
+        <p>Game Status: <span id="game-status">Paused</span></p>
+        <p>Total Games Played: <span id="games-played">0</span></p>
+        <p>Highest Score: <span id="highest-score">0</span></p>
+        <p>Average Score: <span id="average-score">0</span></p>
+    </section>
+
+    <!-- Admin Controls -->
+    <section id="admin-controls">
+        <h2>Admin Controls</h2>
+        <button id="start-game">Start Game</button>
+        <button id="pause-game">Pause Game</button>
+        <button id="restart-game">Restart Game</button>
+        <button id="clear-scores">Clear Scores</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

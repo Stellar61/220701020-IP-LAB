@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: -15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Add New Book</h2>
+    <form id="addBookForm" action="InsertBookServlet" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        <div id="titleError" class="error"></div>
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required>
+        <div id="authorError" class="error"></div>
+
+        <label for="publisher">Publisher:</label>
+        <input type="text" id="publisher" name="publisher">
+
+        <label for="edition">Edition:</label>
+        <input type="text" id="edition" name="edition">
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01">
+        <div id="priceError" class="error"></div>
+
+        <button type="submit">Add Book</button>
+    </form>
+
+    <script>
+        document.getElementById('addBookForm').addEventListener('submit', function(event) {
+            // Clear previous error messages
+            document.getElementById('titleError').textContent = '';
+            document.getElementById('authorError').textContent = '';
+            document.getElementById('priceError').textContent = '';
+
+            // Get form field values
+            var title = document.getElementById('title').value.trim();
+            var author = document.getElementById('author').value.trim();
+            var price = document.getElementById('price').value;
+
+            var isValid = true;
+
+            // Title validation
+            if (title === '') {
+                document.getElementById('titleError').textContent = 'Title is required.';
+                isValid = false;
+            }
+
+            // Author validation
+            if (author === '') {
+                document.getElementById('authorError').textContent = 'Author is required.';
+                isValid = false;
+            }
+
+            // Price validation
+            if (price !== '' && parseFloat(price) <= 0) {
+                document.getElementById('priceError').textContent = 'Price must be a positive number.';
+                isValid = false;
+            }
+
+            // If any validation fails, prevent form submission
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

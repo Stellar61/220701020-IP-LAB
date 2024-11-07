@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Game Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <h1>Game with Enhanced Animations</h1>
+
+    <!-- Game Board Section -->
+    <section id="game-board">
+        <div id="player" class="game-object">Player</div>
+        <div id="obstacle" class="game-object">Obstacle</div>
+    </section>
+
+    <!-- Feedback and Controls -->
+    <section id="feedback">
+        <h2 id="message"></h2>
+        <button id="start-game">Start Game</button>
+        <button id="bounce-effect">Bounce Player</button>
+        <button id="slide-effect">Slide Obstacle</button>
+        <button id="game-over">Game Over</button>
+        <button id="save-game">Save Game</button>
+        <button id="load-game">Load Game</button>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section id="leaderboard">
+        <h3>Leaderboard</h3>
+        <ul id="score-list"></ul>
+    </section>
+
+    <!-- Sound Effects -->
+    <audio id="score-sound" src="score.mp3"></audio>
+    <audio id="gameover-sound" src="gameover.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

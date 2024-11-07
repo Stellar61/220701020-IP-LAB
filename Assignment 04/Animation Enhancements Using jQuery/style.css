@@ -1,0 +1,74 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#game-board {
+    position: relative;
+    width: 400px;  /* Width of the game board */
+    height: 300px; /* Height of the game board */
+    border: 2px solid #000;
+    margin: 20px auto;
+    background-color: #e0e0e0;
+    overflow: hidden; /* Prevent overflow of game objects */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    border-radius: 8px; /* Rounded corners for the game board */
+}
+
+.game-object {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px; /* Rounded corners for player and obstacle */
+    transition: all 0.3s ease; /* Smooth transition for position changes */
+}
+
+#player {
+    background-color: #3498db; /* Blue color for player */
+    top: 100px; /* Starting position */
+    left: 10px; /* Starting position */
+}
+
+#obstacle {
+    background-color: #e74c3c; /* Red color for obstacle */
+    top: 100px; /* Starting position */
+    left: 320px; /* Positioned closer to the right */
+}
+
+#feedback {
+    margin-top: 20px; /* Space between game board and feedback section */
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #2ecc71; /* Green color for buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for buttons */
+    font-size: 16px; /* Increased font size for readability */
+    transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+button:hover {
+    background-color: #27ae60; /* Darker green on hover */
+}
+
+#message {
+    font-size: 20px; /* Font size for messages */
+    color: #e74c3c; /* Red color for message text */
+    margin-top: 10px; /* Space above message */
+}
